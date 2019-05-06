@@ -1,0 +1,33 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+#landing{
+    height: 95vh;
+    background-image:  url('coffee.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#proyectos{
+    height: 90vh;
+    width: 100vw;
+    text-decoration: none;
+}
+#skills{    
+    height: 90vh;
+    width: 100vw;
+    text-decoration: none;
+}
+#mainText{
+    margin-top: 30vh;
+}
+.card{
+    margin-top: 15px;
+}
