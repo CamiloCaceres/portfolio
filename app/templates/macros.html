@@ -15,3 +15,15 @@
   </div>
 
  {% endmacro %}
+
+ {% macro skill(title, img) %}
+ <div class="col s12 m3">
+    <div class="skill center">
+      <img class=" responsive-img" src="{{ img }}" alt="skill">
+      <h4 class="">{{ title }}</h5>
+    </div>
+    <div class="hide-on-med-and-up divider"></div>
+
+  </div>
+
+{% endmacro %}

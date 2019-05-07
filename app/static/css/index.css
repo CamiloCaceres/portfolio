@@ -14,7 +14,14 @@ a{
     background-repeat: no-repeat;
     z-index: -1;
 }
-
+.row{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.divider{
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
 #skills{
     height: 90vh;
     width: 100vw;
