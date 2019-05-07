@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="/static/css/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <title>Camilo Cáceres | Dev</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar-fixed  ">
+      <nav class="grey lighten-4">
+        <div class="nav-wrapper ">
+          <a href="#!" class="brand-logo center black-text">{cc}</a>
+          <ul class="left hide-on-med-and-down">
+            <li><a class="black-text" href="#proyectos">Proyectos</a></li>
+            <li><a class="black-text" href="#">Skills</a></li>
+            <li><a class="black-text" href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Landing Screen -->
+    <div class="section" id="landing">
+      <h1 id="mainText" class="center">Camilo Cáceres</h1>
+      <h6 id="mainText" class="center">Desarrollador Web</h6>
+    </div>
+
+    <!--proyectos-->
+    {% from "macros.html" import proyect_card with context %}
+    <div class="section  grey darken-3" id="proyectos">
+      <div class="container">
+        <h3 class="center white-text lighten subtext">Proyectos Recientes</h3>
+        <div class="row">
+          <!--Bready-->
+          {{
+            proyect_card(
+              props.bready.title | e,
+              props.bready.img | e,
+              props.bready.link | e
+            )
+          }}
+
+          <!--end Bready-->
+          <!--twitter-->
+          {{
+            proyect_card(
+              props.twitter.title | e,
+              props.twitter.img | e,
+              props.twitter.link | e
+            )
+          }}
+          <!--end twitter-->
+          <!--soon-->
+          {{
+            proyect_card(
+              props.soon.title | e,
+              props.soon.img | e,
+              props.soon.link | e
+            )
+          }}
+
+          <!--end soon-->
+        </div>
+      </div>
+    </div>
+    <!--end proyects-->
+
+    <!--Skills-->
+    <div class="section" id="skills">
+      <h3 class="center">Skills</h3>
+      <div class="row"></div>
+    </div>
+    <!--end skills-->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  </body>
+</html>

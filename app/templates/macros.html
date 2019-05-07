@@ -1,0 +1,17 @@
+ {% macro proyect_card(title, img, link) %}
+ <div class="offset-m1 col s12 m3">
+    <a class="" href="{{ link }}">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="{{ img }}" />
+        </div>
+        <div class="card-content">
+          <h5>
+            {{ title }}
+          </h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+ {% endmacro %}
