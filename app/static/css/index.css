@@ -15,13 +15,13 @@ a{
     z-index: -1;
 }
 
-#skills{    
+#skills{
     height: 90vh;
     width: 100vw;
     text-decoration: none;
 }
 #mainText{
-    margin-top: 30vh;
+    margin-top: 20vh;
 }
 .card{
     margin-top: 15px;
@@ -32,13 +32,13 @@ a{
 }
 @media only screen and (max-width: 600px) {
     #proyectos {
-      height: 185vh;
+      height: 200vh;
       width: 100vw;
       text-decoration: none;
       background-color: color("grey", "darken-3");
     }
   }
-  
+
   @media only screen and (min-width: 601px) {
     #proyectos {
       height: 90vh;
