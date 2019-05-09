@@ -11,6 +11,29 @@ main = {
                                 },     
                              
 
-    'skills' : {},
-
+    'skills' : { 'python' : {'title' : 'Python',
+                              'img' : '/static/img/python.png',
+                            },
+                'flask' : {'title' : 'Flask',
+                              'img' : '/static/img/flask.png',
+                            },
+                'git' : {'title' : 'Git',
+                              'img' : '/static/img/git.png',
+                            },
+                'html' : {'title' : 'HTML5',
+                              'img' : '/static/img/html.png',
+                            },
+                'css' : {'title' : 'CSS3',
+                              'img' : '/static/img/css.png',
+                            },
+                'js' : {'title' : 'Javascript',
+                              'img' : '/static/img/js.png',
+                            },
+                'bootstrap' : {'title' : 'Bootstrap4',
+                              'img' : '/static/img/bootstrap.png',
+                            },
+                'github' : {'title' : 'Github',
+                              'img' : '/static/img/github.png',
+                            },
+                }
 }

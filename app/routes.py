@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template, flash
 from app import app
-from app import props as properties
+from app import props 
 
 @app.route('/')
 def base(): 
-    props = properties.main['proyectos']
-    return render_template('index.html', props=props)
+    projects = props.main['proyectos']
+    skills = props.main['skills']
+
+    return render_template('index.html', projects=projects, skills=skills)

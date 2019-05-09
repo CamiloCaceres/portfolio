@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Compiled and minified CSS -->
     <link
@@ -57,9 +59,9 @@
           <!--Bready-->
           {{
             proyect_card(
-              props.bready.title | e,
-              props.bready.img | e,
-              props.bready.link | e
+              projects.bready.title | e,
+              projects.bready.img | e,
+              projects.bready.link | e
             )
           }}
 
@@ -67,18 +69,18 @@
           <!--twitter-->
           {{
             proyect_card(
-              props.twitter.title | e,
-              props.twitter.img | e,
-              props.twitter.link | e
+              projects.twitter.title | e,
+              projects.twitter.img | e,
+              projects.twitter.link | e
             )
           }}
           <!--end twitter-->
           <!--soon-->
           {{
             proyect_card(
-              props.soon.title | e,
-              props.soon.img | e,
-              props.soon.link | e
+              projects.soon.title | e,
+              projects.soon.img | e,
+              projects.soon.link | e
             )
           }}
 
@@ -89,10 +91,65 @@
     <!--end proyects-->
 
     <!--Skills-->
-    <div class="section" id="skills">
-      <h3 class="center">Skills</h3>
-      <div class="row"></div>
-    </div>
+    {% from "macros.html" import skill with context %}
+    <div class="section" id="skills">  
+        <div class="container">
+          <h3 class="center">Skills</h3>
+      
+          <div class="row">
+              {{
+                skill(
+                  skills.python.title | e,
+                  skills.python.img | e,
+                )
+              }}
+              {{
+                skill(
+                  skills.flask.title | e,
+                  skills.flask.img | e,
+                )
+              }}
+              {{
+                skill(
+                  skills.git.title | e,
+                  skills.git.img | e,
+                )
+              }}  
+              {{
+                skill(
+                  skills.github.title | e,
+                  skills.github.img | e,
+                )
+              }}        
+           </div>
+           <div class="row">
+              {{
+                skill(
+                  skills.html.title | e,
+                  skills.html.img | e,
+                )
+              }} 
+              {{
+                skill(
+                  skills.css.title | e,
+                  skills.css.img | e,
+                )
+              }} 
+              {{
+                skill(
+                  skills.bootstrap.title | e,
+                  skills.bootstrap.img | e,
+                )
+              }} 
+              {{
+                skill(
+                  skills.js.title | e,
+                  skills.js.img | e,
+                )
+              }} 
+
+           </div>
+        </div>
     <!--end skills-->
 
     <!-- Compiled and minified JavaScript -->
