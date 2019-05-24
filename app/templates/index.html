@@ -1,158 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+{% extends "base.html" %}
 
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
-    />
+<!-- Navbar -->
 
-    <link rel="stylesheet" href="/static/css/index.css" />
+{% block nav %} {% from "macros.html" import navbar with context %}
+{{ navbar() }}
+{% endblock %} {% block content %}
+<!-- Landing Screen -->
+<div class="section" id="landing">
+  <h1 id="mainText" class="center">Camilo Cáceres</h1>
+  <h6 id="mainText" class="center">Desarrollador Web</h6>
+</div>
 
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+<!--proyectos-->
+{% from "macros.html" import proyect_card with context %}
+<div class="section  grey darken-3" id="proyectos">
+  <div class="container">
+    <h3 class="center white-text lighten subtext">Proyectos Recientes</h3>
+    <div class="row">
+      <!--Bready-->
+      {{
+        proyect_card(
+          projects.bready.title | e,
+          projects.bready.img | e,
+          projects.bready.link | e
+        )
+      }}
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <title>Camilo Cáceres | Dev</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar-fixed  ">
-      <nav class="grey lighten-4">
-        <div class="nav-wrapper ">
-          <a href="#!" class="brand-logo center black-text">{cc}</a>
-          <ul class="left hide-on-med-and-down">
-            <li><a class="black-text" href="#proyectos">Proyectos</a></li>
-            <li><a class="black-text" href="#">Skills</a></li>
-            <li><a class="black-text" href="#">Contacto</a></li>
-          </ul>
+      <!--end Bready-->
+      <!--twitter-->
+      {{
+        proyect_card(
+          projects.twitter.title | e,
+          projects.twitter.img | e,
+          projects.twitter.link | e
+        )
+      }}
+      <!--end twitter-->
+      <!--soon-->
+      {{
+        proyect_card(
+          projects.soon.title | e,
+          projects.soon.img | e,
+          projects.soon.link | e
+        )
+      }}
+
+      <!--end soon-->
+    </div>
+  </div>
+</div>
+<!--end proyects-->
+
+<!--Skills-->
+{% from "macros.html" import skill with context %}
+<div class="section" id="skills">
+  <div class="container">
+    <h3 class="center">Skills</h3>
+
+    <div class="row">
+      {{
+              skill(
+                skills.python.title | e,
+                skills.python.img | e,
+              )
+      }}
+      {{
+              skill(
+                skills.flask.title | e,
+                skills.flask.img | e,
+              )
+      }}
+      {{
+              skill(
+                skills.git.title | e,
+                skills.git.img | e,
+              )
+      }}
+      {{
+              skill(
+                skills.github.title | e,
+                skills.github.img | e,
+              )
+      }}
+    </div>
+    <div class="row">
+      {{
+              skill(
+                skills.html.title | e,
+                skills.html.img | e,
+              )
+      }}
+      {{
+              skill(
+                skills.css.title | e,
+                skills.css.img | e,
+              )
+      }}
+      {{
+              skill(
+                skills.bootstrap.title | e,
+                skills.bootstrap.img | e,
+              )
+      }}
+      {{
+              skill(
+                skills.js.title | e,
+                skills.js.img | e,
+              )
+      }}
+    </div>
+  </div>
+  <!--end skills-->
+
+  <!--Contact-->
+  <div class="section grey lighten-4" id="contact">
+    <div class="container">
+      <h3 class="center">Contacto</h3>
+
+      <div class="row">
+        <div class="col l8 s12">
+          <h5 class="black-text">Sobre mí</h5>
+          <p class="grey-text text-darken-4">
+            Soy un desarrollador apasionado en constante crecimiento, si quieres trabajar conmigo puedes contactarme
+            en cualquiera de las redes sociales o a mi correo. Juntos podemos construir la webapp ideal para tu proyecto 
+            con las mejores practicas de desarrollo web moderno.
+          </p>
         </div>
-      </nav>
-    </div>
 
-    <!-- Landing Screen -->
-    <div class="section" id="landing">
-      <h1 id="mainText" class="center">Camilo Cáceres</h1>
-      <h6 id="mainText" class="center">Desarrollador Web</h6>
-    </div>
-
-    <!--proyectos-->
-    {% from "macros.html" import proyect_card with context %}
-    <div class="section  grey darken-3" id="proyectos">
-      <div class="container">
-        <h3 class="center white-text lighten subtext">Proyectos Recientes</h3>
-        <div class="row">
-          <!--Bready-->
-          {{
-            proyect_card(
-              projects.bready.title | e,
-              projects.bready.img | e,
-              projects.bready.link | e
-            )
-          }}
-
-          <!--end Bready-->
-          <!--twitter-->
-          {{
-            proyect_card(
-              projects.twitter.title | e,
-              projects.twitter.img | e,
-              projects.twitter.link | e
-            )
-          }}
-          <!--end twitter-->
-          <!--soon-->
-          {{
-            proyect_card(
-              projects.soon.title | e,
-              projects.soon.img | e,
-              projects.soon.link | e
-            )
-          }}
-
-          <!--end soon-->
+        <div class="col l3 s12">
+          <h5 class="black-text">Contáctame!</h5>
+          <ul>
+            <li><i class="fab fa-whatsapp"></i><a class="grey-text text-darken-4" href="https://wa.me/573178530344"> WhatsApp</a></li>
+            <li><i class="far fa-envelope"></i><a class="grey-text text-darken-4" href="mailto:camiloac97@gmail.com"> Mail</a></li>
+            <li><i class="fab fa-github"></i><a class="grey-text text-darken-4" href="https://github.com/CamiloCaceres"> Github</a></li>
+            <li><i class="fab fa-linkedin"></i><a class="grey-text text-darken-4" href="https://www.linkedin.com/in/camilo-caceres-5b9918181/"> LinkdIn</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <!--end proyects-->
+    <!--end contact-->
 
-    <!--Skills-->
-    {% from "macros.html" import skill with context %}
-    <div class="section" id="skills">  
-        <div class="container">
-          <h3 class="center">Skills</h3>
-      
-          <div class="row">
-              {{
-                skill(
-                  skills.python.title | e,
-                  skills.python.img | e,
-                )
-              }}
-              {{
-                skill(
-                  skills.flask.title | e,
-                  skills.flask.img | e,
-                )
-              }}
-              {{
-                skill(
-                  skills.git.title | e,
-                  skills.git.img | e,
-                )
-              }}  
-              {{
-                skill(
-                  skills.github.title | e,
-                  skills.github.img | e,
-                )
-              }}        
-           </div>
-           <div class="row">
-              {{
-                skill(
-                  skills.html.title | e,
-                  skills.html.img | e,
-                )
-              }} 
-              {{
-                skill(
-                  skills.css.title | e,
-                  skills.css.img | e,
-                )
-              }} 
-              {{
-                skill(
-                  skills.bootstrap.title | e,
-                  skills.bootstrap.img | e,
-                )
-              }} 
-              {{
-                skill(
-                  skills.js.title | e,
-                  skills.js.img | e,
-                )
-              }} 
-
-           </div>
-        </div>
-    <!--end skills-->
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  </body>
-</html>
+    {% endblock %}
+  </div>
+</div>
