@@ -1,55 +1,82 @@
-html{
+html {
     font-family: 'Montserrat', sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 
 }
 
-#landing{
+#landing {
     height: 95vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
 }
-.row{
+
+.row {
     margin-top: 2em;
     margin-bottom: 1em;
 }
-.divider{
+
+.divider {
     margin-bottom: 1em;
     margin-top: 0.5em;
 }
-#skills{
-    height: 90vh;
-    width: 100vw;
-    text-decoration: none;
-}
-#mainText{
+
+#mainText {
     margin-top: 20vh;
 }
-.card{
+
+.card {
     margin-top: 15px;
 }
-.subtext{
+
+.subtext {
     margin-top: 1.6em;
     margin-bottom: 1.2em;
 }
+/* mobile */
+
 @media only screen and (max-width: 600px) {
     #proyectos {
-      height: 200vh;
-      width: 100vw;
-      text-decoration: none;
-      background-color: color("grey", "darken-3");
+        height: 200vh;
+        width: 100vw;
+        text-decoration: none;
+        background-color: color("grey", "darken-3");
     }
-  }
 
-  @media only screen and (min-width: 601px) {
-    #proyectos {
-      height: 90vh;
-      width: 100vw;
-      text-decoration: none;
+    #skills {
+        height: 200vh;
+        width: 100vw;
+        text-decoration: none;
     }
-  }
+    #contacto {
+        height: 200vh;
+        width: 100vw;
+        text-decoration: none;
+        background-color: color("grey", "lighten-4");
+    }
+
+  
+}
+/* Desktop-tablets */
+@media only screen and (min-width: 601px) {
+    #proyectos {
+        height: 90vh;
+        width: 100vw;
+        text-decoration: none;
+    }
+    #skills {
+        height: 90vh;
+        width: 100vw;
+        text-decoration: none;
+    }
+    #contact{
+        height: 50vh;
+        width: 100vw;
+        text-decoration: none;
+    }
+}

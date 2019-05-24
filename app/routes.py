@@ -8,3 +8,7 @@ def base():
     skills = props.main['skills']
 
     return render_template('index.html', projects=projects, skills=skills)
+
+@app.route('/soon')
+def soon():
+    return render_template('soon.html')
